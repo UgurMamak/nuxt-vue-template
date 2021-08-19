@@ -57,12 +57,12 @@ export default {
 
   server: {
     //port: 8000 // default: 3000
-   // port: 0 // rastgele port oluşturur.
+    // port: 0 // rastgele port oluşturur.
   },
 
-  env:{
-    baseURL:"https://kose-yazisi-nuxt-4bbd5-default-rtdb.firebaseio.com",
-    testVar1:"value1"
+  env: {
+    baseURL: "https://kose-yazisi-nuxt-4bbd5-default-rtdb.firebaseio.com",
+    testVar1: "value1"
     //baseURL: process.env.BASE_URL
   },
 
