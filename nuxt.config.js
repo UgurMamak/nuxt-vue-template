@@ -53,5 +53,20 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  server: {
+    //port: 8000 // default: 3000
+   // port: 0 // rastgele port oluşturur.
+  },
+
+  env:{
+    baseURL:"https://kose-yazisi-nuxt-4bbd5-default-rtdb.firebaseio.com",
+    testVar1:"value1"
+    //baseURL: process.env.BASE_URL
+  },
+
+  router: {
+    //base: '/app/'
+  }
 }
