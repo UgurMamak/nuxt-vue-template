@@ -1,11 +1,11 @@
 <template>
-  <fragment>
+  <div>
     <Header/>
     <Banner/>
     <h1>Default Layout</h1>
     <nuxt/>
     <Footer/>
-  </fragment>
+  </div>
 </template>
 
 <script>

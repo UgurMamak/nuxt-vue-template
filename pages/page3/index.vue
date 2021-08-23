@@ -21,13 +21,13 @@ export default {
           href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
         }
       ],
-      meta: [
+    /*  meta: [
         {
           hid: 'description',
           name: 'description',
           content: 'Home page description'
         }
-      ]
+      ]*/
     }
   }
 }
