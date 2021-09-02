@@ -60,6 +60,9 @@
           <NuxtLink to="/login" tag="li" custom class="nav-item" active-class="active-item">
             <a class="nav-link">login</a>
           </NuxtLink>
+          <NuxtLink to="/register" tag="li" custom class="nav-item" active-class="active-item">
+            <a class="nav-link">register</a>
+          </NuxtLink>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">

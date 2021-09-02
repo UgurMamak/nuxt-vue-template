@@ -30,10 +30,10 @@ export default {
   methods: {
     login() {
       this.$store.dispatch('auth/login', {
-        email:this.email,
-        password:this.password
-      }).then(response=>{
-       // this.$router.push("/");
+        email: this.email,
+        password: this.password
+      }).then(response => {
+        // this.$router.push("/");
       });
 
     }

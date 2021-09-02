@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p>{{ $v }}</p>
+
     <form @submit.prevent="register">
 
       <div class="form-group" :class="{ 'has-error': $v.email.$error }">
@@ -19,6 +19,8 @@
         <div class="error" v-if="!$v.password.minLength">Name must have at least {{
             $v.password.$params.minLength.min
           }}
+        </div>
+        <div class="error" v-if="!$v.password.passwordChar">Şifreniz en az bir özel karakter veya rakam içermelidir.
         </div>
       </div>
 
@@ -44,7 +46,9 @@
 </template>
 
 <script>
-import {required, minLength, sameAs, email} from 'vuelidate/lib/validators'
+import {required, minLength, sameAs, email} from 'vuelidate/lib/validators';
+
+import {passwordChar} from "../helpers/index"
 
 export default {
   data() {
@@ -65,7 +69,8 @@ export default {
     },
     password: {
       required,
-      minLength: minLength(4)
+      minLength: minLength(4),
+      passwordChar
     },
     repeatPassword: {
       sameAsPassword: sameAs('password'),
@@ -81,7 +86,7 @@ export default {
           email: this.email,
           password: this.password
         }).then(response => {
-          console.log("register",response);
+          console.log("register", response);
           // this.$router.push("/");
         });
       }
