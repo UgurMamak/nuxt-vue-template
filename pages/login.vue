@@ -21,15 +21,21 @@
 
 <script>
 export default {
-  data(){
-    return{
-      email:null,
-      password:null
+  data() {
+    return {
+      email: null,
+      password: null
     }
   },
-  methods:{
-    login(){
-      this.$store.dispatch('login','gonder');
+  methods: {
+    login() {
+      this.$store.dispatch('auth/login', {
+        email:this.email,
+        password:this.password
+      }).then(response=>{
+       // this.$router.push("/");
+      });
+
     }
   }
 }

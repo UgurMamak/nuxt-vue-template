@@ -3,15 +3,32 @@ console.log(process.env.testVar1);
 console.log(process.env.baseURL);
 */
 
-import Vuex from "vuex";
-import auth from "./auth";
+export const state = () => ({
+  counter: 0
+})
 
-const createStore = () => {
-  return new Vuex.Store({
-    modules: {
-      auth
-    }
-  });
+export const mutations = {
+  increment(state, {payload}) {
+    state.counter = state.counter + payload;
+  },
+  decrement(state, {payload}) {
+    state.counter = state.counter + payload;
+  },
+  updateCounter(state, payload) {
+    state.counter = state.counter + payload;
+  }
 }
 
-export default createStore;
+export const getters = {
+  getCounter(state) {
+    return state.counter;
+  }
+}
+
+
+export const actions = {
+  nuxtServerInit(vuexContext, context) {
+    //context.app.$axios
+    //console.log("nuxtServerInit",context);
+  }
+};

@@ -34,7 +34,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/Components.js",
-    "~/plugins/vue-fragment.js"
+    "~/plugins/vue-fragment.js",
+    "~/plugins/vuelidate.js"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -61,7 +62,8 @@ export default {
   },
 
   env: {
-    baseURL: "https://kose-yazisi-nuxt-4bbd5-default-rtdb.firebaseio.com",
+    baseURL: "https://template-server-default-rtdb.firebaseio.com",
+    firebaseAPIKEY:"AIzaSyCP7C3_OPejkEgt6uBLtj5PZeI3iLjGTVo",
     testVar1: "value1"
     //baseURL: process.env.BASE_URL
   },

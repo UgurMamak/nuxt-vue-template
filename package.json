@@ -14,5 +14,9 @@
     "nuxt": "^2.15.7",
     "vue-fragment": "^1.5.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sass": "^1.39.0",
+    "sass-loader": "^10.2.0",
+    "vuelidate": "^0.7.6"
+  }
 }
