@@ -1,7 +1,7 @@
 <template>
   <fragment>
     <h1>Custom Layout</h1>
-    <nuxt/>
+    <nuxt :nuxt-child-key="'someKey'" />
   </fragment>
 </template>
 

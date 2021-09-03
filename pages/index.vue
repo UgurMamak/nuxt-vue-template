@@ -1,51 +1,28 @@
 <template>
-  <div class="container">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-        Dropdown button
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 col-24 mb-1" v-for="post in posts" :key="post.id">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.body }}</p>
+            <NuxtLink :to="'/posts/'+post.id" tag="a" class="card-link">Post Detay</NuxtLink>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="m-4">
-      <h5>{{ counter }}</h5>
-      <button class="btn btn-primary" @click="increment">+1</button>
-      <button class="btn btn-primary" @click="decrement">-1</button>
-
-      <button class="btn btn-secondary" @click="updateCounter(+1)">+1</button>
-      <button class="btn btn-secondary" @click="updateCounter(-1)">-1</button>
-    </div>
-
   </div>
 </template>
 
 <script>
-import {mapGetters, mapMutations} from "vuex";
-
 export default {
-  methods: {
-    updateCounter(data) {
-      this.$store.commit('updateCounter', data);
-    },
-    ...mapMutations({
-      increment: {
-        type: 'increment',
-        payload: 1
-      },
-      decrement: {
-        type: 'decrement',
-        payload: -1
-      },
-    })
+  data() {
+    return {}
   },
-  computed: {
-    ...mapGetters({
-      counter: 'getCounter'
-    })
-  },
+  async asyncData(context) {
+    const posts = await context.store.dispatch('getPosts');
+    return {posts}
+  }
 }
 </script>

@@ -1,43 +1,3 @@
-<!--<template>
-  <div>
-    <p>Header Component</p>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <NuxtLink to="/" tag="li" class="nav-item">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </NuxtLink>
-          <NuxtLink tag="li" to="/page4" class="nav-item">
-            <a class="nav-link" href="#">Page4</a>
-          </NuxtLink>
-          <NuxtLink tag="li" to="/page5" class="nav-item">
-            <a class="nav-link" href="#">Page5</a>
-          </NuxtLink>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-  </div>
-</template>-->
-
 <template>
   <div>
     <p>Header Component</p>
@@ -50,6 +10,9 @@
         <ul class="navbar-nav mr-auto">
           <NuxtLink to="/" tag="li" class="nav-item" active-class="active-item" exact>
             <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+          </NuxtLink>
+          <NuxtLink to="/page2" tag="li" class="nav-item" active-class="active-item">
+            <a class="nav-link">Page2</a>
           </NuxtLink>
           <NuxtLink to="/page4" tag="li" class="nav-item" active-class="active-item">
             <a class="nav-link">Page4</a>
@@ -84,7 +47,6 @@
     </nav>
   </div>
 </template>
-
 
 <script>
 export default {}

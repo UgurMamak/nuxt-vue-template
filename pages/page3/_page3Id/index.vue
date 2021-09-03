@@ -4,6 +4,7 @@
     <h5>$route.params.page3Id= {{ $route.params.page3Id }}</h5>
     <h5>asyncData-routeId= {{ this.routeId }}</h5>
     <h5>asyncData-parametre2= {{ this.parametre2 }}</h5>
+    <h5>fetch-parametre3= {{ this.parametre3 }}</h5>
   </div>
 </template>
 
@@ -12,9 +13,11 @@ export default {
 
   data() {
     return {
-      var1: "value-1"
+      var1: "value-1",
     }
   },
+
+  computed: {},
 
   async asyncData(context) {
     //SSR

@@ -105,13 +105,14 @@ export default {
 Using state in project
 
 this.$store.data.loadedPosts
+
 Using mutations in project
-
 this.$store.commit('data/setPosts', [{id: '1',...}, {id: '2',...}]);
+
 Using actions in project
-
 this.$store.dispatch('data/setPosts', [{id: '1',...}, {id: '2',...}]);
-Using getters in project
 
+
+Using getters in project
 this.$store.getters['data/loadedPosts'];
 */

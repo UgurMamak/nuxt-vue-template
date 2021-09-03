@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h6>Page5 parametre</h6>
+    <h6>Page5 parametre={{$route.params.slug}} </h6>
   </div>
 </template>
 

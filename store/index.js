@@ -30,5 +30,9 @@ export const actions = {
   nuxtServerInit(vuexContext, context) {
     //context.app.$axios
     //console.log("nuxtServerInit",context);
+  },
+
+  getPosts(vuexContext) {
+    return this.$axios.$get('https://jsonplaceholder.typicode.com/posts');
   }
 };
