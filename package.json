@@ -15,6 +15,7 @@
     "vue-fragment": "^1.5.2"
   },
   "devDependencies": {
+    "js-cookie": "^3.0.1",
     "sass": "^1.39.0",
     "sass-loader": "^10.2.0",
     "vuelidate": "^0.7.6"
