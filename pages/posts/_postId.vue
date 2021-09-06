@@ -14,23 +14,19 @@
     <div class="row">
       <div class="col-12">
         <h4>Yorumlar</h4>
-        <ul class="list-group">
-          <li href="#" v-for="comment in comments" key="comment.id" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">{{ comment.name }}</h5>
-            </div>
-            <p class="mb-1">{{ comment.body }}</p>
-            <small class="text-muted">{{ comment.email }}</small>
-          </li>
-        </ul>
+        <comment-list :comments="comments"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import commentList from "@/components/comment/comment-list"
 
+export default {
+  components: {
+    commentList
+  },
   async asyncData(context) {
     let comments = await context.$axios.$get(`https://jsonplaceholder.typicode.com/comments?postId=${context.params.postId}`);
 
@@ -38,7 +34,6 @@ export default {
 
     return {comments, post};
   }
-
 }
 </script>
 
