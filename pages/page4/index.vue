@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  middleware:['sessionControl']
 }
 </script>
 

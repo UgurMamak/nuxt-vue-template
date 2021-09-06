@@ -70,5 +70,13 @@ export default {
 
   router: {
     //base: '/app/'
-  }
+  },
+
+ /* loading: {
+    color: 'blue',
+    height: '5px'
+  }*/
+
+  loading: '~/components/loading.vue'
+
 }

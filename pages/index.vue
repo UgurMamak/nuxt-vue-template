@@ -12,6 +12,7 @@
 import postCard from "@/components/post/post-card"
 
 export default {
+  middleware: ['sessionControl'],
   components: {
     postCard
   },
