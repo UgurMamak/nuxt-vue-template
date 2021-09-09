@@ -28,7 +28,7 @@ export const getters = {
 
 export const actions = {
   nuxtServerInit(vuexContext, context) {
-    //context.app.$axios
+    //context.app.$axios.get()
     //console.log("nuxtServerInit",context);
   },
 

@@ -70,6 +70,13 @@ export default {
 
   router: {
     //base: '/app/'
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '/customRoute',
+        component: resolve(__dirname, 'pages/login')
+      })
+    }
   },
 
  /* loading: {
@@ -78,5 +85,7 @@ export default {
   }*/
 
   loading: '~/components/loading.vue'
+
+
 
 }

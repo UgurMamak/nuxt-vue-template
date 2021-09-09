@@ -2,11 +2,12 @@
   <div>
     <p>Header Component</p>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <NuxtLink to="/" tag="a" class="navbar-brand">Navbar</NuxtLink>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <NuxtLink to="/" tag="li" class="nav-item" active-class="active-item" exact>
@@ -21,12 +22,12 @@
           <NuxtLink to="/page5" tag="li" custom class="nav-item" active-class="active-item">
             <a class="nav-link">Page5</a>
           </NuxtLink>
- <!--         <NuxtLink to="/login" tag="li" custom class="nav-item" active-class="active-item">
-            <a class="nav-link">login</a>
-          </NuxtLink>
-          <NuxtLink to="/register" tag="li" custom class="nav-item" active-class="active-item">
-            <a class="nav-link">register</a>
-          </NuxtLink>-->
+          <!--         <NuxtLink to="/login" tag="li" custom class="nav-item" active-class="active-item">
+                     <a class="nav-link">login</a>
+                   </NuxtLink>
+                   <NuxtLink to="/register" tag="li" custom class="nav-item" active-class="active-item">
+                     <a class="nav-link">register</a>
+                   </NuxtLink>-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
@@ -41,18 +42,22 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">
               <span :class="{'d-none':!this.$store.getters['auth/isAuthenticated']}">Hesap</span>
               <span :class="{'d-none':this.$store.getters['auth/isAuthenticated']}">Giriş Yap /Üye Ol</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <NuxtLink to="/login" tag="a" class="dropdown-item" :class="{'d-none':this.$store.getters['auth/isAuthenticated']}">
+              <NuxtLink to="/login" tag="a" class="dropdown-item"
+                        :class="{'d-none':this.$store.getters['auth/isAuthenticated']}">
                 Giriş Yap
               </NuxtLink>
-              <NuxtLink to="/register" tag="a" class="dropdown-item" :class="{'d-none':this.$store.getters['auth/isAuthenticated']}">
+              <NuxtLink to="/register" tag="a" class="dropdown-item"
+                        :class="{'d-none':this.$store.getters['auth/isAuthenticated']}">
                 Üye Ol
               </NuxtLink>
-              <a href="#" @click.prevent="logout" class="dropdown-item" :class="{'d-none':!this.$store.getters['auth/isAuthenticated']}">Çıkış Yap</a>
+              <a href="#" @click.prevent="logout" class="dropdown-item"
+                 :class="{'d-none':!this.$store.getters['auth/isAuthenticated']}">Çıkış Yap</a>
             </div>
           </li>
         </ul>
@@ -67,8 +72,8 @@
 
 <script>
 export default {
-  methods:{
-    logout(){
+  methods: {
+    logout() {
       this.$store.dispatch('auth/logout');
       this.$router.push("/login");
     }

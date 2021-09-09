@@ -4,7 +4,6 @@
       <h5 class="card-title">{{ post.title }}</h5>
       <p class="card-text">{{ post.body }}</p>
       <NuxtLink :to="'/posts/'+post.id" tag="a" class="card-link">Post Detay</NuxtLink>
-      <a href="#" class="card-link">Another link</a>
     </div>
   </div>
 </template>
